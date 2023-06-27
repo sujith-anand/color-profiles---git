@@ -63,7 +63,7 @@
     --portal-pane-header-color:#000;
     --portal-pane-header-font-size:1.15em;
     --portal-pane-header-font-weight:800;
-    --portal-pane-padding:1em;
+    --portal-pane-padding:.5em;
     --portal-pane-radius:12px;
     --portal-pane-shadow:0px 10px 20px rgba(18, 38, 63, 0.03);
 }
@@ -357,17 +357,26 @@ table.list tr:nth-child(odd) {
 
 //portal panes
 
+
+.gwt-horizontal-panel{
+    padding-bottom:.6em !important;
+
+    :not(:last-child){
+        margin-right: 5px !important;
+    }
+}
+
+
+
 .gwtapps-DockableWidget{
+    margin-left:5px !important;
+    margin-right:5px !important;
     box-shadow: var(--portal-pane-shadow) !important;
 }
 
 .bg_portlet{
     padding: var(--portal-pane-padding) !important;
     border-radius: var(--portal-pane-radius) !important;
-}
-
-.gwt-horizontal-panel{
-    padding-bottom:.6em !important;
 }
 
 .titlehdrPortlet {
@@ -707,14 +716,15 @@ header#top-nav {
 // back, previous & next
 
 #iconTitleBar {
-    margin-top: 0px !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
     position: sticky !important;
     top: 0 !important;
     width: 87vw !important;
     /* height: 30px; */
     /* min-height: 30px; */
     /* color: #885726; */
-    padding-top: 6px !important;
+    padding: 1em !important;
     z-index: 100 !important;
     background: var(--background-color) !important;
 }
