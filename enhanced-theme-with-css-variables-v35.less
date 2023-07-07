@@ -5,11 +5,8 @@
  */
  :root {
     --font-family:'Poppins', sans-serif;
-    --tc-accent: #1890ff; //primary accent color rgb(24, 144, 255)
+    // --tc-accent: #1890ff; //primary accent color rgb(24, 144, 255)
     --anchor-color:#1890ff;
-    --nav-hover-color: #1890ff1a; //rgba(24,144,255,0.1)
-    --left-nav-icons-color: #1890ff; //left navigation icon colors, icons disabled in enhanced theme
-    --global-nav-color: #001a49; //global navigation color
     --button-color: #1890ff; // fallback to primary accent or you can change to your preference
     --button-color-hover: #1471c7;
     --button-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
@@ -24,13 +21,14 @@
     --card-body: #fff; //card body color
     --card-shadow: 0px 2px 2px rgba(2, 13, 29, 0.1); //card shadow color
     --card-border: rgba(0, 0, 0, 0); //card border color
+    --global-nav-icons: #fff; // global nav icons color
+    --global-nav-color: #001a49; //global navigation color
     --global-search-width:16vw;
     --global-search-bar-color: var(--background-color); //global search box background color
     --global-search-bar-border: #d4d9e1; //global search border color
     --global-search-button: #fff; // global search button color
     --global-nav-icons-text: #fff; //global nav icons text color
     --global-search-bar-icon: #1890ff;
-    --global-nav-icons: #fff; // global nav icons color
     --global-search-border: 4px;
     --hamburger-icon: #444; //hamburger menu icon color
     --top-nav-menu-border: #ddd; // top nav menu border
@@ -38,8 +36,10 @@
     --top-nav-text: #444; //top nav text color
     --top-nav-text-selected: #1890ff; //top nav text selected color
     --top-nav-bottom-border-selected: #1890ff; //top selected bottom border color
+    --top-nav-hover-color: #1890ff1a; //rgba(24,144,255,0.1)
     --left-nav-border: #ddd; //left navigation menu border
     --left-nav: #fff; //left navigation menu color
+    --left-nav-icons-color: #1890ff; //left navigation icon colors, icons disabled in enhanced theme
     --left-nav-text: #8695ab; //left navigation menu parent text
     --left-nav-text-selected: #1890ff; //left navigation menu parent text when selected/expanded
     --left-nav-selected-background: #dee5f0; //left navigation menu parent background when selected/expanded
@@ -109,7 +109,7 @@
  * background color of: 
  *	- top nav tab hover
  */
-@top-nav-hover-background: var(--nav-hover-color);
+@top-nav-hover-background: var(--top-nav-hover-color);
 
 @top-nav-hover-text: #444;
 
