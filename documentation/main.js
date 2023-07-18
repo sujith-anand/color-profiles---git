@@ -26,8 +26,32 @@ $('.container').append(styleArray.map((el,index) => {
 return `<div class="p-4">
 <h1>${index+1}. ${el.name.slice(2)}</h1>
 <h4>Default Value: <span class="code">${el.name}:${el.value}</span></h4>
-<h6>Type: ${el.type}</h6>
+<h6>Type: ${createType(el.type)}</h6>
 <h5>${el.text}</h5>
 <h4>Example:</h4>
 </div>`
 }).join(""));
+
+$('.table tbody').append(styleArray.map((el,index) => {
+    return `
+    <tr>
+        <th>${index+1}</th>
+        <td>${el.name}</td>
+        <td><span class="code">${el.value}</span></td>
+        <td>${createType(el.type)}</td>
+        <td>${el.text}</td>
+        <td>Example</td>
+    </tr>`
+    }).join(""));
+
+    function createType(val){
+        const tempTypes = {
+            'Font Family': 'https://www.w3schools.com/cssref/pr_font_font-family.php',
+            'Font Wieght': 'https://www.w3schools.com/cssref/pr_font_weight.php',
+            'Color': 'https://www.w3schools.com/css/css_colors_hex.asp',
+            'Units': 'https://www.w3schools.com/cssref/css_units.php',
+            'Shadow': 'https://www.w3schools.com/css/css3_shadows.asp',
+        };
+
+        return `<a href="${tempTypes[val]}" target=_blank>${val}</a>`
+    }
