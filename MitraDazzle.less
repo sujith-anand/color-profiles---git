@@ -4,13 +4,14 @@
  * Variables representing every customizable color within TeamConnect.
  */
 :root {
-    --font-family: 'poppins', sans-serif;
+    --font-family:"Helvetica Neue", Calibri, Arial, sans-serif;
     --tc-accent: #0067D2; //primary accent color rgb(24, 144, 255)
     --anchor-color: #0067D2;
     --nav-hover-color: #F2F7FD; //rgba(24,144,255,0.1)
     --left-nav-icons-color: #0067D2; //left navigation icon colors, icons disabled in enhanced theme
     --button-color: transparent; // fallback to primary accent or you can change to your preference
     --button-color-hover: #BFD9F4;
+    --button-border: 1px solid #0067D2;
     --button-disabled-color: #C7D3DF;
     --button-shadow: none;
     --button-radius: 0.5rem;
@@ -38,7 +39,7 @@
     --top-nav-menu-border: #C7D3DF; // top nav menu border
     --top-nav-menu: #fff; //top nav menu color
     --top-nav-text: #242A30; //top nav text color
-    --top-nav-text-selected: #0067D2; //top nav text selected color
+    --top-nav-text-selected: #ED5B3E; //top nav text selected color
     --top-nav-bottom-border-selected: #ED5B3E; //top selected bottom border color
     --left-nav-border: #C7D3DF; //left navigation menu border
     --left-nav: #fff; //left navigation menu color
@@ -58,7 +59,7 @@
     --table-text: #001A35; // text in the table
     --table-header: #001A35; // table header text
     --page-header-color: #001A35; // page header color
-    --scroll-bar-color: #F2F7FD; //scroll bar color
+    --scroll-bar-color: #E3E9EF; //scroll bar color
     --body-text-color: #242A30; // base color of text across TeamConnect
     --info-background: #00774E; // info background color
     --info-border: #003B27; // info border color
@@ -76,6 +77,11 @@
     --search-config-button-text-color: #242A30;
     --search-config-button-background-hover: #ABBDCF;
     --search-config-button-text-color-hover: #07080A;
+    --dropdown-background-color-hover: #F2F7FD;
+    --dropdown-border-color-hover: #ED5B3E;
+    --dropdown-textcolor-hover: #0067D2;
+    --dropdown-background-color: #fff;
+    --dropdown-border-color: #0067D2;
 
 }
 
@@ -364,6 +370,11 @@ table.list tr:nth-child(odd) {
 ::-webkit-scrollbar {
     width: 10px !important;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: #F2F7FD!important;
+  }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -690,22 +701,26 @@ header#top-nav {
     background: var(--button-color) !important;
     padding: 0.5em 1em;
     border-radius: var(--button-radius) !important;
-    box-shadow: var(--button-shadow);
+    box-shadow: var(--button-shadow) !important;
+    border: var(--button-border) !important;
 }
 
 .btn-primary,
 .btn-default {
     color: var(--button-text-color) !important;
     border-radius: var(--button-radius) !important;
-    box-shadow: var(--button-shadow);
     background: var(--button-color) !important;
+    box-shadow: var(--button-shadow) !important;
+    border: var(--button-border) !important;
     transition: .3s ease;
 }
 
 .btn {
     color: var(--button-text-color) !important;
+    border: var(--button-border);
     transition: .3s ease;
-    border-radius: var(--button-radius) !important;
+    box-shadow: var(--button-shadow) !important;
+    border: var(--button-border) !important;
 }
 
 .btn:hover,
