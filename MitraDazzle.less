@@ -9,15 +9,15 @@
     --anchor-color: #0067D2;
     --nav-hover-color: #F2F7FD; //rgba(24,144,255,0.1)
     --left-nav-icons-color: #0067D2; //left navigation icon colors, icons disabled in enhanced theme
-    --button-color: transparent; // fallback to primary accent or you can change to your preference
-    --button-color-hover: #BFD9F4;
-    --button-border: 1px solid #0067D2;
-    --button-disabled-color: #C7D3DF;
+    --button-color: #C7D3DF; // fallback to primary accent or you can change to your preference
+    --button-color-hover: #E3E9EF;
+    --button-border: none;
+    --button-disabled-color: #E3E9EF;
     --button-shadow: none;
     --button-radius: 0.5rem;
-    --button-text-color: #0067D2;
-    --button-disabled-text-color: #fff;
-    --button-icon-background: #0067D2;
+    --button-text-color: #242A30;
+    --button-disabled-text-color: #8FA7BF;
+    --button-icon-background: #6B7D8F;
     --background-color: #F9FAFC; //background color for TeamConnect
     --text-field-labels: #001A35; //text-fields labels color
     --text-field: #242A30; //text field colors
@@ -26,26 +26,26 @@
     --card-body: #fff; //card body color
     --card-shadow: 0px 2px 2px #E3E9EF; //card shadow color
     --card-border: #E3E9EF; //card border color
-    --global-nav-color: #0067D2; //global navigation color
-    --global-nav-icons: #fff; // global nav icons color
-    --global-nav-icons-text: #fff; //global nav icons text color
+    --global-nav-color: #fff; //global navigation color
+    --global-nav-icons: #6B7D8F; // global nav icons color
+    --global-nav-icons-text: #47535F; //global nav icons text color
     --global-search-width: 16vw;
     --global-search-bar-color: var(--background-color); //global search box background color
-    --global-search-bar-border: none; //global search border color
+    --global-search-bar-border: #C7D3DF; //global search border color
     --global-search-button: #fff; // global search button color
-    --global-search-bar-icon: #0067D2;
+    --global-search-bar-icon: #6B7D8F;
     --global-search-border: 4px;
-    --hamburger-icon: #242A30; //hamburger menu icon color
+    --hamburger-icon: #fff; //hamburger menu icon color
     --top-nav-menu-border: #C7D3DF; // top nav menu border
-    --top-nav-menu: #fff; //top nav menu color
-    --top-nav-text: #242A30; //top nav text color
-    --top-nav-text-selected: #ED5B3E; //top nav text selected color
-    --top-nav-bottom-border-selected: #ED5B3E; //top selected bottom border color
+    --top-nav-menu: #0067D2; //top nav menu color
+    --top-nav-text: #fff; //top nav text color
+    --top-nav-text-selected: #fff; //top nav text selected color
+    --top-nav-bottom-border-selected: #fff; //top selected bottom border color
     --left-nav-border: #C7D3DF; //left navigation menu border
     --left-nav: #fff; //left navigation menu color
     --left-nav-text: #242A30; //left navigation menu parent text
-    --left-nav-text-selected: #0067D2; //left navigation menu parent text when selected/expanded
-    --left-nav-selected-background: #F2F7FD; //left navigation menu parent background when selected/expanded
+    --left-nav-text-selected: #ED5B3E; //left navigation menu parent text when selected/expanded
+    --left-nav-selected-background: #FEF9F5; //left navigation menu parent background when selected/expanded
     --left-nav-selected-border: #ED5B3E; //left navigation selected border color
     --left-nav-hovered-background: var(--left-nav-selected-background); //left navigation hovered background
     --left-nav-hovered-border: var(--left-nav-selected-border); //left navigation hovered border color
@@ -61,15 +61,15 @@
     --page-header-color: #001A35; // page header color
     --scroll-bar-color: #E3E9EF; //scroll bar color
     --body-text-color: #242A30; // base color of text across TeamConnect
-    --info-background: #00774E; // info background color
-    --info-border: #003B27; // info border color
-    --warning-background: #FF991F; // warning background color
-    --warning-border: #003B27; // warning border color
-    --error-background: #CD2026; // error background color
-    --error-border: #7F4C0F; // error border color;
+    --info-background: #BFDDD3; // info background color
+    --info-border: #00774E; // info border color
+    --warning-background: #FFCC8F; // warning background color
+    --warning-border: #FF991F; // warning border color
+    --error-background: #F2C7C9; // error background color
+    --error-border: #DA585D; // error border color;
     --portal-pane-header-color: #001A35;
-    --portal-pane-header-font-size: 1em;
-    --portal-pane-header-font-weight: 600;
+    --portal-pane-header-font-size: 1.25em;
+    --portal-pane-header-font-weight: 400;
     --portal-pane-padding: 1em;
     --portal-pane-radius: 0.5rem;
     --portal-pane-shadow: 0px 10px 20px rgba(18, 38, 63, 0.03);
@@ -168,7 +168,7 @@
  *	- hovered over header elements within the left navigation bar
  *	- hovered over header elements within the recent items drop down
  */
-@hover-border: #338fb4;
+@hover-border: #0070D5;
 
 /*
  * Border color of: 
@@ -340,28 +340,42 @@ table.list tr:nth-child(odd) {
 
 // error messages
 
-//info message
-.msgArea .infoMsgArea {
-    background-color: var(--info-background) !important;
-    border: solid 1px var(--info-border) !important;
-}
-
-//warning message
-.msgArea .warnMsgArea {
-    background-color: var(--warning-background) !important;
-    border-bottom: 1px solid var(--warning-border) !important;
-}
-
-//error message
-.msgArea .errorMsgArea {
-    background-color: var(--error-background) !important;
-    border: solid 1px var(--error-border) !important;
-}
-
-//system error
-.sysMsgArea .header.error {
-    background-color: var(--error-background) !important;
-    border-bottom: 1px solid var(--error-border) !important;
+.msgArea {
+    .msg{
+        color: var(--card-header-text) !important;
+        box-shadow: none !important;
+       border: initial !important;
+       margin: 0 1rem !important;
+       border-radius: 0.5rem !important;
+      }
+      a{
+        color: var(--card-header-text) !important;
+      }
+      .msgIcon{
+        filter: invert(100) opacity(0.8) !important;
+      }
+    //info message
+    .infoMsgArea{
+        background-color: var(--info-background) !important;
+        border-top: 4px solid var(--info-border) !important;
+    }
+    //warning message
+    .warnMsgArea {
+        background-color: var(--warning-background) !important;
+        border-top: 4px solid var(--warning-border) !important;
+    }
+    //error message
+    .errorMsgArea {
+        background-color: var(--error-background) !important;
+        border-top: 4px solid var(--error-border) !important;
+    }
+    //system error
+    .header {
+        .error {
+            background-color: var(--error-background) !important;
+            border-bottom: 1px solid var(--error-border) !important;
+        }
+    }
 }
 
 //scroll bar
@@ -726,8 +740,8 @@ header#top-nav {
 .btn:hover,
 .btn-primary:hover {
     background-color: var(--button-color-hover) !important;
-    padding-left: 1em !important;
-    padding-right: 1em !important;
+    // padding-left: 1em !important;
+    // padding-right: 1em !important;
 }
 
 .btn[disabled] {
@@ -759,6 +773,11 @@ header#top-nav {
     }
 }
 
+.btn-buttonbar:disabled, .button:disabled, .ir-button-style:disabled{
+    color: var(--button-disabled-text-color) !important;
+    background-color: var(--button-disabled-color) !important;
+
+  }
 // .btn-group>.btn:last-of-type {
 //     border-bottom-right-radius: 4px !important;
 //     border-top-right-radius: 4px !important;
@@ -929,7 +948,7 @@ header#top-nav {
 }
 
 .buttonbar-dropdown-icon {
-    color: var(--white-default) !important;
+    color: #fff !important;
 }
 
 //Dropdowns
