@@ -29,6 +29,7 @@
     --global-nav-color: #fff; //global navigation color
     --global-nav-icons: #6B7D8F; // global nav icons color
     --global-nav-icons-text: #47535F; //global nav icons text color
+    --global-nav-icons-text-show: none; //global nav icons text color
     --global-search-width: 16vw;
     --global-search-bar-color: var(--background-color); //global search box background color
     --global-search-bar-border: #C7D3DF; //global search border color
@@ -456,8 +457,14 @@ header#top-nav {
             flex-wrap: nowrap !important;
             flex-direction: row !important;
             align-items: center;
-            padding: 0 10px;
+            padding: 0 1.5rem;
             color: var(--global-nav-icons-text) !important;
+        }
+
+        .iconText {
+            margin-top: 0px !important;
+            margin-left: 6px;
+            display: var(--global-nav-icons-text-show) !important;
         }
 
         a .navIcon *[fill]:not([fill="none"]):not([fill="#FFFFFF"]):not([fill="#ffffff"]),
@@ -529,11 +536,6 @@ header#top-nav {
             }
         }
     }
-}
-
-.iconText {
-    margin-top: 0px !important;
-    margin-left: 6px;
 }
 
 //header navigation items
