@@ -15,9 +15,9 @@
     --button-disabled-color: #E3E9EF;
     --button-shadow: none;
     --button-radius: 0.5rem;
-    --button-text-color: #242A30;
+    --button-text-color: #242A30; //change here as well @button-text
     --button-disabled-text-color: #8FA7BF;
-    --button-icon-background: #6B7D8F;
+    // --button-icon-background: #6B7D8F;
     --background-color: #F9FAFC; //background color for TeamConnect
     --text-field-labels: #001A35; //text-fields labels color
     --text-field: #242A30; //text field colors
@@ -279,6 +279,8 @@
  *  - expand and collapse all buttons for category rights
  */
 @left-nav-icon: #0070D5;
+
+@button-text: #242A30;
 
 //font application
 html,
@@ -780,6 +782,12 @@ header#top-nav {
     background-color: var(--button-disabled-color) !important;
 
   }
+
+  button .buttonbar-img{
+    & when (luma(@button-text) < 50%) {
+        filter: invert(1);
+    }
+  }
 // .btn-group>.btn:last-of-type {
 //     border-bottom-right-radius: 4px !important;
 //     border-top-right-radius: 4px !important;
@@ -943,11 +951,11 @@ header#top-nav {
 //*****************New Classes (UI BRAND)*****************
 
 //Button Icons
-.buttonbar-img {
-    background-color: var(--button-icon-background) !important;
-    padding: 2px;
-    border-radius: 4px;
-}
+// .buttonbar-img {
+//     background-color: var(--button-icon-background) !important;
+//     padding: 2px;
+//     border-radius: 4px;
+// }
 
 .buttonbar-dropdown-icon {
     color: #fff !important;
